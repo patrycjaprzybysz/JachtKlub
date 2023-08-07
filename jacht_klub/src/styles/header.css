@@ -1,0 +1,31 @@
+.Header{
+    box-sizing: border-box;
+    background-color: theme('colors.blue_header'/40%) ;
+    
+    
+}
+.nav_item{
+    color: theme('colors.white');
+    font-size: 20px;
+
+
+}
+
+.nav_list{
+    font-family: 'jaldi', sans-serif;
+    display: flex;
+    gap: 61px;
+    margin: 35px;
+}
+
+.divider{
+    width: 475px;
+    height: 1px;
+}
+
+.nav-flex {
+    display: flex;
+    align-items: center;
+    
+}
+
