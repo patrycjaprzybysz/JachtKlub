@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './react_elements/Header';
+import Background from './react_elements/Background';
 import './styles/index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <Header />
+        <Background />
     </React.StrictMode>
 );

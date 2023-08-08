@@ -14,7 +14,12 @@ export default {
             sans: ['Graphik', 'sans-serif'],
             jaldi: ['Jaldi', 'sans-serif'],
         },
-        extend: {},
+        extend: {
+            backgroundImage: {
+                logo: 'url(src/assets/media/logo.png)',
+                background: 'url(src/assets/media/background.webp)',
+            },
+        },
     },
     plugins: [],
 };
