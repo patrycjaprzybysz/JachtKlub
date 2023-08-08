@@ -1,3 +1,6 @@
+import '../styles/weather-icons.min.css';
+import '../styles/weather-icons-wind.min.css';
+
 export default function WeatherWidget() {
     const apiURL =
         'https://api.open-meteo.com/v1/forecast?latitude=54.4209&longitude=16.4107&hourly=temperature_2m,weathercode,windspeed_10m,winddirection_10m&windspeed_unit=kn&timezone=auto&forecast_days=1';
@@ -72,16 +75,28 @@ export default function WeatherWidget() {
             weatherIcon = 'wi-thunderstorm';
             weatherDescription = 'Burze';
         }
+
+        SetWeatherIcons();
     }
 
     function SetWeatherIcons(time) {
-        // Night time
+        if (!weatherIcon.includes('day')) return;
+
         if (time <= 4 || time >= 19) {
+            weatherIcon = weatherIcon.replace('day', 'night');
+            if (weatherIcon.includes('sunny')) weatherIcon = weatherIcon.replace('sunny', 'clear');
         }
     }
 
     function RenderWeatherData() {
-        const widgetData = `<p>${weatherTemperature} stopni</p> <i class="wi ${weatherIcon}></i>`;
+        const widgetData = `
+        <p>${weatherTemperature} <i class="wi   wi-celsius"></i></p>
+        <i class="wi ${weatherIcon}"></i>
+        <p>${weatherDescription}</p>
+        
+        <p>${windSpeed} Kn</p>
+        <i class="wi wi-wind from-${Math.trunc(windDirection)}-deg"></i>
+        `;
 
         const widgetElement = document.querySelector('.weatherWidget');
 

@@ -3,7 +3,7 @@ import '../styles/header.css';
 export default function Header() {
     return (
         <>
-            <header className="Header">
+            <header className="header">
                 <WeatherWidget />
                 <div className="">
                     <nav className="nav-flex">
