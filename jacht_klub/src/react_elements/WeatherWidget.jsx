@@ -87,20 +87,20 @@ export default function WeatherWidget() {
 
     function RenderWeatherData() {
         const widgetData = `
-        <div class="flex justify-between items-center gap-7">
+        <div class="flex justify-between items-center gap-7 text-white">
             <div class="flex items-center">
                 <p>${weatherTemperature} </p>
                 <i class="wi wi-celsius text-4xl"></i>
             </div>
             <div class="flex items-center gap-3">
-                <i class="wi ${weatherIcon} text-5xl"></i>
+                <i class="wi ${weatherIcon} text-4xl"></i>
                 <p>${weatherDescription}</p>
             </div>
         </div>
-        <div class="flex justify-between items-center gap-3">
+        <div class="flex justify-between items-center gap-3 text-white">
             <p>${windSpeed} Kn</p>
             <div>
-                <i class="wi wi-wind from-${Math.trunc(windDirection)}-deg text-5xl"></i>
+                <i class="wi wi-wind from-${Math.trunc(windDirection)}-deg text-4xl"></i>
             </div>
         </div>
         `;
@@ -112,5 +112,5 @@ export default function WeatherWidget() {
 
     GetWeatherData();
 
-    return <div className="weatherWidget flex justify-between items-center text-2xl px-10 py-5"></div>;
+    return <div className="weatherWidget flex justify-between items-center text-lg px-10 py-5  "></div>;
 }

@@ -13,11 +13,16 @@ export default {
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
             jaldi: ['Jaldi', 'sans-serif'],
+            josefinsans: ['josefin-sans', 'sans-serif'],
         },
         extend: {
             backgroundImage: {
                 logo: 'url(src/assets/media/logo.png)',
                 background: 'url(src/assets/media/background.webp)',
+            },
+            boxShadow: {
+                left: '-20px -20px rgb(63,130,172)',
+                right: '20px -20px rgb(63,130,172)',
             },
         },
     },
