@@ -19,14 +19,14 @@ export default function Background() {
                 header.classList.add();
                 header.querySelector('nav').classList.add('h-36');
                 if (!headerExpand) {
-                    window.scrollTo(0, landingPhoto.scrollHeight - header.offsetHeight + 0.5);
+                    window.scroll({left: 0, top: landingPhoto.scrollHeight - header.offsetHeight + 0.5, behavior: 'smooth'});
                     headerExpand = true;
                 }
             } else {
                 header.classList.remove();
                 header.querySelector('nav').classList.remove('h-36');
                 if (headerExpand) {
-                    window.scrollTo(0, landingPhoto.scrollHeight - header.offsetHeight);
+                    window.scroll({left: 0, top: landingPhoto.scrollHeight - header.offsetHeight, behavior: 'smooth'});
                     headerExpand = false;
                 }
             }
