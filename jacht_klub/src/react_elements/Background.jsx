@@ -1,6 +1,8 @@
 import {useEffect} from 'react';
 import Header from './Header';
 import LandingNews from './LandingNews';
+import LandingAbout from './LandingAbout';
+import Crew from './Crew';
 
 export default function Background() {
     let header = document.querySelector('header');
@@ -42,6 +44,7 @@ export default function Background() {
                 </h1>
             </div>
             <LandingNews />
+            <LandingAbout />
         </>
     );
 }
