@@ -1,28 +1,19 @@
-import WeatherWidget from './WeatherWidget';
 export default function Header() {
     return (
         <>
-            <header className="bg-blue_header/40 w-screen box-border fixed z-10">
-                <WeatherWidget />
-                <img className="logo absolute left-1/2 -translate-x-1/2 -translate-y-12 h-36 bg-text rounded-full p-2" src="src/assets/media/logo.png"></img>
-                <nav className="flex justify-around">
-                    <div className="flex items-end">
-                        <ul className="font-jaldi mx-9 gap-16 flex ">
-                            <li className="text-white text-xl">Aktualności</li>
-                            <li className="text-white text-xl">Galeria</li>
-                            <li className="text-white text-xl">Regaty</li>
-                        </ul>
-                    </div>
-                    <div className="flex items-end">
-                        <ul className="font-jaldi mx-9 gap-16 flex">
-                            <li className="text-white text-xl">O nas</li>
-                            <li className="text-white text-xl">Kontakt</li>
-                            <li className="text-white text-xl">Dokumenty</li>
-                        </ul>
-                    </div>
+            <div className="bg-blue_background/40 flex justify-between fixed w-full z-10">
+                <img src="src/assets/media/logo.png" alt="" className="bg-text rounded-full p-1 mx-6 my-2 w-24 " />
+                <nav className="self-end mx-20 my-6">
+                    <ul className="flex gap-20">
+                        <li>Aktualności</li>
+                        <li>Galeria</li>
+                        <li>Regaty</li>
+                        <li>O nas</li>
+                        <li>Kontakt</li>
+                        <li>Dokumenty</li>
+                    </ul>
                 </nav>
-                <script src="../js/logic.js"></script>
-            </header>
+            </div>
         </>
     );
 }

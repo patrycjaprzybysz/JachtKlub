@@ -9,11 +9,13 @@ export default {
             blue_background_2: '#C2E0ED',
             grey: '#D9D9D9',
             white: '#F3F3F3',
+            grey2: '#666666',
+            black: '#000000',
         },
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
-            jaldi: ['Jaldi', 'sans-serif'],
-            josefinsans: ['josefin-sans', 'sans-serif'],
+            jaldi: 'Jaldi',
+            josefinsans: 'Josefin-sans',
         },
         extend: {
             backgroundImage: {
