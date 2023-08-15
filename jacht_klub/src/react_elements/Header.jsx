@@ -4,7 +4,7 @@ export default function Header() {
         <>
             <header className="bg-blue_header/40 w-screen box-border fixed z-10">
                 <WeatherWidget />
-                <img className="absolute left-1/2 -translate-x-1/2 -translate-y-12 h-36 bg-text rounded-full p-2" src="src/assets/media/logo.png"></img>
+                <img className="logo absolute left-1/2 -translate-x-1/2 -translate-y-12 h-36 bg-text rounded-full p-2" src="src/assets/media/logo.png"></img>
                 <nav className="flex justify-around">
                     <div className="flex items-end">
                         <ul className="font-jaldi mx-9 gap-16 flex ">

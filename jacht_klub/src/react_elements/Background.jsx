@@ -5,28 +5,30 @@ import LandingAbout from './LandingAbout';
 import Crew from './Crew';
 
 export default function Background() {
-    let header = document.querySelector('header');
-    let landingPhoto = document.querySelector('.landingPhoto');
+    let header;
+    let landingPhoto;
+    let logo;
     let headerExpand = false;
 
     useEffect(() => {
         header = document.querySelector('header');
         landingPhoto = document.querySelector('.landingPhoto');
+        logo = document.querySelector('.logo');
 
         // logic of header style change
         window.onscroll = () => {
             console.log(window.scrollY);
             if (window.scrollY > landingPhoto.scrollHeight - header.offsetHeight) {
                 //Przejscie headera jest troche problematyczne, moze udaloby sie zeby zmniejszac jego przezroczystoc im nizej zdjecia jest zeby nie trzeba bylo sie martwic przeskokiem ze zdjecia na newsy
-                header.classList.add();
-                header.querySelector('nav').classList.add('h-36');
+                logo.classList.add('h-24', 'top-0', 'translate-y-2');
+                logo.classList.remove('-translate-y-12');
                 if (!headerExpand) {
                     window.scroll({left: 0, top: landingPhoto.scrollHeight - header.offsetHeight + 0.5, behavior: 'smooth'});
                     headerExpand = true;
                 }
             } else {
-                header.classList.remove();
-                header.querySelector('nav').classList.remove('h-36');
+                logo.classList.remove('h-24', 'top-0', 'translate-y-2');
+                logo.classList.add('-translate-y-12');
                 if (headerExpand) {
                     window.scroll({left: 0, top: landingPhoto.scrollHeight - header.offsetHeight, behavior: 'smooth'});
                     headerExpand = false;
