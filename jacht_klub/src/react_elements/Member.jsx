@@ -1,4 +1,4 @@
-export default function (photo, name, role) {
+export default function ({photo, name, role}) {
     return (
         <>
             <div className="flex flex-row justify-center items-center">

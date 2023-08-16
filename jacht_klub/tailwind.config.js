@@ -8,7 +8,7 @@ export default {
             text: '#154360',
             blue_background_2: '#C2E0ED',
             grey: '#D9D9D9',
-            white: '#F3F3F3',
+            white: '#FFFFFF',
             grey2: '#666666',
             black: '#000000',
         },

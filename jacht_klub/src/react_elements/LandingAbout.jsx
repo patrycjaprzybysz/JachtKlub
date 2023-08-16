@@ -10,7 +10,7 @@ export default function LandingAbout() {
                 </div>
                 <div className="w-1/2">
                     <h3 className="font-jaldi text-text text-3xl font-bold">Kim jesteśmy?</h3>
-                    <p>
+                    <p className="w-8/9">
                         Jacht Klub Królewskiego Miasta Darłowo to grupa przyjaciół, pasjonatów żeglarstwa, motorowodniaków i podróżników. Jesteśmy grupą ludzi,
                         którzy wierzą, że dzieląc się pasją można dawać radość, integrować społeczeństwo, eksplorować świat. Tak się złożyło, że wszystkich nas
                         połączyła woda, wiatr i słońce. Jacht Klub zawiązał się w oparciu o spotkanie założycielskie w 2020r. z inicjatywy kilkorga znajomych
@@ -22,16 +22,10 @@ export default function LandingAbout() {
             <div className="flex gap-10 my-10">
                 <div className="w-1/2 mx-14">
                     <h3 className="font-jaldi text-text text-3xl font-bold">Czym się zajmujemy?</h3>
-                    <p>
-                        ​Naszym priorytetem jest uprawianie i rozwój sportów wodnych we wszelkich jego formach. Organizujemy rejsy w ramach turystyki wodnej,
-                        integrujemy społeczność żeglarską, motorowodną oraz popularyzujemy idę jachtingu i żeglarstwa jako formy racjonalnego i kulturalnego
-                        wypoczynku i rekreacji. Skupiamy sie na podnoszeniu poziomu umiejętności żeglarskich przez członków Klubu, krzewieniu wiedzy żeglarskiej
-                        wśród osób zainteresowanych uprawianiem żeglarstwa i innych sportów wodnych. Aktywnie uczestniczymy w ochronie przyrody, a zwłaszcza
-                        naturalnego środowiska wodnego. Ważnym elementem naszej działalności jest organizowanie i przeprowadzanie sportowych regat żeglarskich w
-                        których uczestniczą inne kluby i organizacje żeglarskie, organizacje pożytku publicznego, żeglarze niezrzeszeni oraz uczniowie Zespołu
-                        Szkół Morskich w Darłowie. Współpraca z darłowskim ZSM jest ważnym elementem naszej działalności. Staramy taką politykę szkoleniową aby
-                        poprzez inicjowanie, organizowanie i przeprowadzanie teoretycznych i praktycznych kursów i szkoleń podnosić umiejętności żeglarskie i
-                        motorowodne członków Klubu zapewnić samodzielność kadrową Klubu.
+                    <p className="">
+                        {
+                            ' ​Naszym priorytetem jest uprawianie i rozwój sportów wodnych we wszelkich jego formach. Organizujemy rejsy w ramach turystyki wodnej,integrujemy społeczność żeglarską, motorowodną oraz popularyzujemy idę jachtingu i żeglarstwa jako formy racjonalnego i kulturalnego wypoczynku i rekreacji. Skupiamy sie na podnoszeniu poziomu umiejętności żeglarskich przez członków Klubu, krzewieniu wiedzy żeglarskiej wśród osób zainteresowanych uprawianiem żeglarstwa i innych sportów wodnych. Aktywnie uczestniczymy w ochronie przyrody, a zwłaszcza naturalnego środowiska wodnego. Ważnym elementem naszej działalności jest organizowanie i przeprowadzanie sportowych regat żeglarskich w których uczestniczą inne kluby i organizacje żeglarskie, organizacje pożytku publicznego, żeglarze niezrzeszeni oraz uczniowie Zespołu Szkół Morskich w Darłowie. Współpraca z darłowskim ZSM jest ważnym elementem naszej działalności. Staramy taką politykę szkoleniową aby poprzez inicjowanie, organizowanie i przeprowadzanie teoretycznych i praktycznych kursów i szkoleń podnosić umiejętności żeglarskie i motorowodne członków Klubu zapewnić samodzielność kadrową Klubu.'
+                        }
                     </p>
                 </div>
                 <div className="w-1/2">
