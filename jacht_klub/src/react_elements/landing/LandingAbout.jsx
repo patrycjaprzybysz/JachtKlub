@@ -5,7 +5,7 @@ export default function LandingAbout() {
             <div className="flex gap-10">
                 <div className="w-1/2">
                     <div className="bg-blue_background_2 w-11/12 h-full">
-                        <img src="src/assets/media/background.webp" alt="" className="w-11/12 translate-x-20 translate-y-6" />
+                        <img src="../../src/assets/media/background.webp" alt="" className="w-11/12 translate-x-20 translate-y-6" />
                     </div>
                 </div>
                 <div className="w-1/2">
@@ -30,7 +30,7 @@ export default function LandingAbout() {
                 </div>
                 <div className="w-1/2">
                     <div className="w-full">
-                        <img src="src/assets/media/background.webp" alt="" className="" />
+                        <img src="../../src/assets/media/background.webp" alt="" className="" />
                     </div>
                 </div>
             </div>

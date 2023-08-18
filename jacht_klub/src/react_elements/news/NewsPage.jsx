@@ -1,8 +1,7 @@
-import Header from './Header';
+import Header from '../general/Header';
 import News from './News';
 
 export default function NewsPage({newsArray}) {
-    console.log(newsArray);
     return (
         <>
             <Header />

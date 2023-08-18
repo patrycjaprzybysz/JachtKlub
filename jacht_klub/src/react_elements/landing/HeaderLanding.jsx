@@ -1,5 +1,5 @@
 import WeatherWidget from './WeatherWidget';
-import NavigationButton from './NavigationButton';
+import NavigationButton from '../general/NavigationButton';
 export default function HeaderLanding() {
     return (
         <>
@@ -9,14 +9,14 @@ export default function HeaderLanding() {
                 <nav className="flex justify-around">
                     <div className="flex items-end">
                         <ul className="font-jaldi mx-9 gap-16 flex  ">
-                            <NavigationButton name={'aktualności'} reactComponentName={'NewsPage'} />
+                            <NavigationButton name={'aktualności'} htmlPageName={'news'} />
                             <li className="text-white text-xl">GALERIA</li>
                             <li className="text-white text-xl">REGATY</li>
                         </ul>
                     </div>
                     <div className="flex items-end">
                         <ul className="font-jaldi mx-9 gap-16 flex">
-                            <li className="text-white text-xl">O NAS</li>
+                            <NavigationButton name={'o nas'} htmlPageName={'about'} />
                             <li className="text-white text-xl">KONTKAT</li>
                             <li className="text-white text-xl">DOKUMENTY</li>
                         </ul>

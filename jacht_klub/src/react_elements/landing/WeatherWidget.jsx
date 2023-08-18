@@ -1,5 +1,5 @@
-import '../styles/weather-icons.min.css';
-import '../styles/weather-icons-wind.min.css';
+import '../../styles/weather-icons.min.css';
+import '../../styles/weather-icons-wind.min.css';
 
 export default function WeatherWidget() {
     const apiURL =

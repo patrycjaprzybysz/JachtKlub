@@ -1,4 +1,17 @@
+import Header from '../general/Header';
+import Article from '../news/Article';
+
 export default function QuickNews({title, description, photo = '/src/assets/media/background.webp', reverse}) {
+    function GoToArticle() {
+        document.querySelector('.root').innerHTML = '';
+        return (
+            <>
+                <Header />
+                <Article title={title} text={text} />
+            </>
+        );
+    }
+
     return (
         <>
             <div className="px-10 flex justify-center items-center">

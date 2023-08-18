@@ -2,7 +2,7 @@ import {useEffect} from 'react';
 import HeaderLanding from './HeaderLanding';
 import LandingNews from './LandingNews';
 import LandingAbout from './LandingAbout';
-import Crew from './Crew';
+import Crew from '../about/Crew';
 
 export default function BackgroundLanding() {
     let header;
