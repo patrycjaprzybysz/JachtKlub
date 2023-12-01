@@ -2,7 +2,11 @@ import {useEffect} from 'react';
 import HeaderLanding from './HeaderLanding';
 import LandingNews from './LandingNews';
 import LandingAbout from './LandingAbout';
-import Crew from '../about/Crew';
+import Crew from './Crew';
+import Regaty from './Regaty';
+import Galeria from './Galeria';
+import Kontakt from './Kontakt';
+
 
 export default function BackgroundLanding() {
     let header;
@@ -29,14 +33,23 @@ export default function BackgroundLanding() {
 
     return (
         <>
-            <HeaderLanding />
-            <div className="landingPhoto w-full h-screen bg-background bg-cover bg-center relative">
-                <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 font-josefinsans text-5xl text-text font-bold">
-                    Jacht Klub Królewskiego Miasta Darłowo
-                </h1>
-            </div>
-            <LandingNews />
+        <HeaderLanding />
+      <div className="landingPhoto w-full h-screen bg-background bg-cover bg-center relative mb-0 mt-0">
+        <div className="landing-title absolute top-1/2 left-1/2 font-josefinsans text-text animate__animated animate__slideInLeft">
+          <h1>Jacht Klub</h1>
+          <h1>Królewskiego Miasta Darłowo</h1>
+        </div>
+      </div>
             <LandingAbout />
+            <Crew/>
+            <LandingNews />
+            <Regaty/>
+            <Galeria/>
+            <Kontakt/>
+            
+            
+            
+            
         </>
     );
 }
