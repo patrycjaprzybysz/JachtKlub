@@ -3,14 +3,20 @@ export default {
     content: ['./index.html', './index.css', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         colors: {
-            blue_header: '#1C5F88',
+            blue_header: '#2E425D',
             blue_background: '#3F82AC',
             text: '#154360',
             blue_background_2: '#C2E0ED',
-            grey: '#D9D9D9',
+            grey: '#F8F8F8',
             white: '#FFFFFF',
             grey2: '#666666',
             black: '#000000',
+            beige: '#D0CBC7',
+            greyblue: '#5B84AA',
+           
+            navy:'#30415D',
+            darkgrey:"#474848",
+            yellow:"#E5CE00"
         },
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
@@ -28,5 +34,5 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [ ],
 };
