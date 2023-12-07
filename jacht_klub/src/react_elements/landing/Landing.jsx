@@ -5,10 +5,25 @@ import LandingAbout from './LandingAbout';
 import Crew from './Crew';
 import Regaty from './Regaty';
 import Galeria from './Galeria';
-import Kontakt from './Kontakt';
+import Kontakt from './Contact';
+import morze from '../../assets/media/firefly2.png'
 
 
 export default function BackgroundLanding() {
+
+    const mainContainerStyle = {
+        backgroundImage: `url(${morze})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '200vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        margin: 0,  // Dodaj tę linię
+        padding: 0,
+      };
+
     let header;
     let landingPhoto;
     let logo;
@@ -40,12 +55,16 @@ export default function BackgroundLanding() {
           <h1>Królewskiego Miasta Darłowo</h1>
         </div>
       </div>
+      
             <LandingAbout />
             <Crew/>
             <LandingNews />
-            <Regaty/>
-            <Galeria/>
-            <Kontakt/>
+            <Galeria/> 
+            <div style={mainContainerStyle}>
+              
+      <Regaty />
+      <Kontakt />
+    </div>
             
             
             

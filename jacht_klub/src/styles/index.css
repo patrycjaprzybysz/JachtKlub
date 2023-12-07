@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* This can help in some cases */
+}
+
+
 @keyframes slideInLeft {
     0% {
       opacity: 0;
@@ -356,3 +364,131 @@
     filter: hue-rotate(0deg);
   }
 }
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.contact-section {
+  border: 2px solid  rgba(255, 255, 255, 0.5); 
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.0); 
+  text-align: center; 
+  margin-right: 80px;
+ 
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200vh; 
+}
+
+.gallery {
+  display: grid;
+  place-items: center;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  margin-right: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery h2 {
+  font-size: 2.25rem;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms ease-in-out, font-size 300ms ease-in-out;
+}
+
+.gallery:hover h2 {
+  font-size: 2.5rem;
+  
+}
+
+
+
+.gallery:hover h2::after {
+  opacity: 0.5;
+  transform: scaleX(1.2);
+  
+}
+
+.gallery__background {
+  object-fit: cover;
+  width: 400px;
+  height: 300px;
+  transition: transform 500ms ease-in-out;
+}
+
+.gallery:hover .gallery__background {
+  transform: scale(1.4); /* Zwiększenie skali dla większego powiększenia */
+}
+
+
+
+/* Dodane, aby uzyskać efekt przy najechaniu */
+.gallery__frame {
+  position: absolute;
+  width: 360px;
+  height: 160px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms ease-in-out;
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .gallery:hover .gallery__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+
+  .gallery:active .gallery__frame {
+    transform: scale(0.9);
+  }
+}
+
+
+/* Klasy dla animacji dropdown */
+.dropdown_menu-1 {
+  animation: slideDown 300ms ease-in-out forwards;
+}
+
+/* Animacja dla pojedynczych elementów dropdown */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+

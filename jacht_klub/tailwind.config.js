@@ -13,10 +13,11 @@ export default {
             black: '#000000',
             beige: '#D0CBC7',
             greyblue: '#5B84AA',
-           
+            darknavy: "#022239",
             navy:'#30415D',
             darkgrey:"#474848",
-            yellow:"#E5CE00"
+            yellow:"#E5CE00",
+            blue3:"#78A0C7"
         },
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],

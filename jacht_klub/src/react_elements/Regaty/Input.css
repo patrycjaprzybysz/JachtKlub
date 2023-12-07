@@ -1,0 +1,111 @@
+:root {
+    --secondary: #30415D;
+    --hover: #F5F5F5;
+    --text: #212121;
+    --primary: black;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .box {
+    background-color: white;
+    padding: 24px;
+    padding-top: 12px;
+    border-radius: 16px;
+  }
+  
+  .box h2 {
+    margin: 0px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  
+  .input__wrapper {
+    position: relative;
+    padding: 15px 0 0;
+  }
+  
+  .input__field {
+    border: 0;
+    border-bottom: 2px solid var(--secondary);
+    outline: 0;
+    font-size: 14px; 
+    color: var(--text);
+    padding: 4px 0px;
+    padding-right: 32px;
+    height: 15px; 
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .input__field::placeholder {
+    color: transparent;
+    padding-top: 10px;
+    transition: padding-top 0.2s;
+  }
+  
+  .input__field:placeholder-shown ~ .input__label {
+    cursor: text;
+    color: var(--secondary);
+  }
+  
+  label,
+  .input__field:focus ~ .input__label,
+  .input__field:not(:placeholder-shown) ~ .input__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    font-size: 14px;
+    left: -1px;
+    color: var(--secondary);
+    transition: 0.3s;
+  }
+  
+  .input__field:focus ~ .input__label,
+  .input__field:not(:placeholder-shown) ~ .input__label {
+    color: var(--primary);
+    top: -10px; /* Adjust as needed */
+    padding-top: 0;
+  }
+  
+  .input__field:focus {
+    border-bottom: 2px solid var(--primary);
+  }
+  
+  .input__icon {
+    position: absolute;
+    right: -14px;
+    bottom: -11px;
+    width: 26px;
+    height: 26px;
+    padding: 2px;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    cursor: pointer;
+  }
+  
+  .input__icon:hover {
+    border-radius: 50%;
+    background-color: var(--hover);
+  }
+  
+  .smaller-input {
+    font-size: 14px;
+    height: 30px;
+   
+   
+  
+    
+  }
+  .input__field-margin{
+    margin-bottom: 20px ;
+        
+  }
+  
+  
+  

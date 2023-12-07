@@ -7,11 +7,12 @@ import GH from '../../assets/media/GH.webp';
 import GT from '../../assets/media/GT.webp';
 import ML from '../../assets/media/ML.webp';
 import RB from '../../assets/media/RB.webp';
+import navy from '../../assets/media/navy.jpg'
 
 function Crew() {
   return (
     
-    <div className="bg-navy w-full h-96 ">
+     <div className="bg-navy w-full h-96 "> 
       <h1 className="text-center font-bold text-3xl text-white">Członkowie zarządu</h1>
       <div className="overflow-x-auto overflow-y-hidden flex items-center" >
       <div className="flex mt-10">
@@ -72,7 +73,7 @@ function Crew() {
           marginLeft="20px"
           marginRight="20px"
         />
-        {/* Dodaj więcej komponentów Member w miarę potrzeb */}
+       
       </div>
     </div>
     </div>

@@ -4,7 +4,13 @@ import "../../styles/index.css";
 function Timer({ type, time }) {
   const formattedTime = time < 10 ? `0${time}` : time;
 
-  return <div className={type}>{formattedTime}</div>;
+  const timerStyle = {
+    color: 'white',
+    fontSize: '5em', 
+  };
+
+  return <div className={type} style={timerStyle}>{formattedTime}</div>;
+
 }
 
 function Regaty() {
@@ -32,20 +38,20 @@ function Regaty() {
   }, [targetDate]);
 
   return (
-    <div className='bg-navy w-full h-96 flex flex-col justify-center items-center'>
-      <h1 className='text-white text-center text-3xl mb-4'>Następne regaty</h1>
-      <div className="text-overlay flex space-x-4">
-        <Timer type="hours" time={time.hours} />
-        <div className="separator">:</div>
-        <Timer type="minutes" time={time.minutes} />
-        <div className="separator">:</div>
-        <Timer type="seconds" time={time.seconds} />
-      </div>
-      <button className="bg-yellow rounded-lg px-4 py-2 text-black mt-4">
-        Dowiedz się więcej!
-      </button>
+<div id="regaty" className='center-screen text-center '>
+    <h1 className='text-white text-6xl mb-4 mt-80'>Następne regaty</h1>
+    <div className="text-overlay flex space-x-4 mb-4 ">
+      <Timer type="hours" time={time.hours} />
+      <div className="separator" style={{ color: "white", fontSize: "4em" }}>:</div>
+      <Timer type="minutes" time={time.minutes} />
+      <div className="separator" style={{ color: "white", fontSize: "4em" }}>:</div>
+      <Timer type="seconds" time={time.seconds} />
     </div>
-  );
+    <a href="../../src/html/regaty.html" className="bg-yellow rounded-lg px-4 py-2 text-black">
+      Dowiedz się więcej!
+    </a>
+  </div>
+);
 }
 
 export default Regaty;

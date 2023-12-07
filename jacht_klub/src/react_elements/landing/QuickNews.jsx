@@ -25,7 +25,7 @@ export default function QuickNews({title, description, photo = '/src/assets/medi
                                 Darłowo nie jest łatwe. Niełatwe, bo rejs trwał ponad półtora miesiąca, załogi wymieniały się sześć razy, było pięciu kapitanów
                                 i trzydziestu jeden uczestników. Cała historia rozpoczęła się kilka lat temu, kiedy w mojej głowie zrodził się pomysł, ...
                             </p>
-                            <button className="font-jaldi text-white bg-text text-lg rounded-r-lg rounded-l-lg w-32 ">Czytaj dalej</button>
+                            <a href="../../src/html/article.html" className="font-jaldi text-white bg-text text-lg rounded-r-lg rounded-l-lg w-32 text-center">Czytaj dalej</a>
                         </div>
                     </div>
                 </div>

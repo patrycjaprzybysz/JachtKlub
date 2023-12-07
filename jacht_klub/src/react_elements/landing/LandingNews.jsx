@@ -1,25 +1,25 @@
 import QuickNews from './QuickNews';
+import NavigationButton from '../general/NavigationButton'
 export default function LandingNews() {
     return (
         <>
             
-            <div className="flex justify-center items-center">
-            <span style={{ borderBottom: "2px solid #E5CE00", flex: "1", margin: "20px 40px", marginTop:"40px" }}></span>
-                    <h1 className="text-yellow text-center text-4xl font-bold mt-3">AKTUALNOŚCI</h1>
-                    <span style={{ borderBottom: "2px solid #E5CE00", flex: "1", margin: "20px 40px", marginTop:"40px" }}></span>
-                    
-                </div>
-                <div className="flex flex-col justify-center gap-10">
-                    <QuickNews reverse={0} />
+            <div id="aktualnosci" >
+           
+            <h1 className="font-josefinsans text-text text-4xl font-bold ml-20 mt-10 relative">
+  Aktualności
+  
+</h1>
+
+                   
+                
+                <div className="bg-white flex flex-col justify-center gap-10">
                     <QuickNews reverse={1} />
+                    <QuickNews reverse={0} />
                 </div>
-                <div className="flex justify-center items-center">
-                <span style={{ borderBottom: "1px solid #E5CE00", flex: "1", margin: "40px 10px", marginTop:"10px" }}></span>
-                    <button className="text-yellow text-center text-xl font-bold ">archiwum aktualności</button>
-                    <span style={{ borderBottom: "1px solid #E5CE00", flex: "1", margin: "40px 10px", marginTop:"10px" }}></span>
-                    </div>
+                <a href ='../../src/html/news.html' id="przejdzButton" className="text-text mt-2 ml-20 text-l">przejdź do starszych artykułów</a>
+
+                </div>
         </>
     );
 }
-
-//archiwum aktulanosci ma przenosic do strony z nimi wszystkimi tam gdzie teraz przenosi przycisk aktualnosci

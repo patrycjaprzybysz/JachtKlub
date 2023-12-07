@@ -1,16 +1,19 @@
 import React from 'react';
 import czymsie from "../../assets/media/czymsie.jpg";
 import kim from "../../assets/media/kim jestesmy2.jpeg";
+import niebo from "../../assets/media/niebo.jpg";
 
 export default function LandingAbout() {
     return (
         <>
-            <div className="bg-grey w-full h-150 flex flex-col justify-between">
-            <div className="flex justify-center items-center">
+        <div id="landingAbout" style={{backgroundImage:`url(${niebo})`,backgroundSize: 'cover',
+    backgroundPosition: 'center'}}>
+            <div className="w-full h-150 flex flex-col justify-between">
+            {/* <div className="flex justify-center items-center">
             <span style={{ borderBottom: "2px solid #E5CE00", flex: "1", margin: "20px 40px", marginTop:"40px" }}></span>
                     <h1 className="text-yellow text-center text-4xl font-bold mt-5">O NAS</h1>
                     <span style={{ borderBottom: "2px solid #E5CE00", flex: "1", margin: "20px 40px", marginTop:"40px" }}></span>
-                </div>
+                </div> */}
                 <div className="flex justify-between p-8">
                     
                     <div className="flex-1 text-left">
@@ -57,6 +60,7 @@ export default function LandingAbout() {
                     </div>
                 </div>
 
+            </div>
             </div>
         </>
     );
