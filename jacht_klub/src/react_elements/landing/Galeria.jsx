@@ -7,7 +7,7 @@ function Galeria() {
 
   return (
     <div id="galeria">
-       <h1 className="font-josefinsans text-text text-4xl font-bold ml-5 mt-10 mb-10 relative">
+       <h1 className="md:text-lg lg:text-3xl sm:text-base 2xl:text-6xl font-josefinsans text-text  font-bold ml-5 mt-10 mb-10 relative">
   Galeria
   </h1>
       <div className="overflow-x-auto overflow-y-hidden flex items-center" >

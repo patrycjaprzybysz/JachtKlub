@@ -9,6 +9,7 @@ import Kontakt from './Contact';
 import morze from '../../assets/media/firefly2.png'
 
 
+
 export default function BackgroundLanding() {
 
     const mainContainerStyle = {
@@ -49,12 +50,20 @@ export default function BackgroundLanding() {
     return (
         <>
         <HeaderLanding />
-      <div className="landingPhoto w-full h-screen bg-background bg-cover bg-center relative mb-0 mt-0">
-        <div className="landing-title absolute top-1/2 left-1/2 font-josefinsans text-text animate__animated animate__slideInLeft">
-          <h1>Jacht Klub</h1>
-          <h1>Królewskiego Miasta Darłowo</h1>
-        </div>
-      </div>
+        <div className="landingPhoto w-full h-screen bg-background bg-cover bg-center relative mb-0 mt-0">
+  <div className="landing-title absolute top-1/2 left-1/2 font-josefinsans text-text animate__animated animate__slideInLeft">
+  <h1 className=" landing-title">
+  Jacht Klub <br /> Królewskiego Miasta Darłowo
+</h1>
+
+  </div>
+</div>
+
+
+
+
+
+      {/* <SecondHeader/> */}
       
             <LandingAbout />
             <Crew/>

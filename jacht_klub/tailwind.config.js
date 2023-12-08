@@ -34,6 +34,8 @@ export default {
                 right: '20px -20px rgb(63,130,172)',
             },
         },
+
+       
     },
     plugins: [ ],
 };

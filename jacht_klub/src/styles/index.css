@@ -2,12 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dla małych ekranów */
+/* Dla ekranów pomiędzy 640px a 768px */
+@media (min-width: 640px) and (max-width: 768px) {
+  .landing-title h1 {
+    font-size: 4xl;
+  }
+}
+
+/* Dla ekranów pomiędzy 768px a 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .landing-title h1 {
+    font-size: 2em;
+  }
+}
+
+/* Dla ekranów pomiędzy 1024px a 1280px */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .landing-title h1 {
+    font-size: 3em;
+  }
+}
+
+/* Dla ekranów pomiędzy 1280px a 1536px */
+@media (min-width: 1280px) and (max-width: 1536px) {
+  .landing-title h1 {
+    font-size: 3em;
+  }
+}
+
+/* Dla ekranów powyżej 1536px */
+@media (min-width: 1536px) {
+  .landing-title h1 {
+    font-size: 5em;
+  }
+}
+
+
+
+
 
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+ 
+  
   /* This can help in some cases */
+}
+
+.your-section-class {
+  overflow: auto;
 }
 
 
@@ -32,14 +77,14 @@ body, html {
     left: 10%;
     transform: translate(-50%, -50%);
     width: calc(100% - 2rem);
-    max-width: 800px;
+    max-width: 1200px;
     padding: 2rem;
     text-align: left; /* Dodajemy tę właściwość, aby tekst był wyśrodkowany */
   }
   
   .landing-title h1 {
     margin: 0; /* Usuwamy domyślne marginesy odniesienia dla h1 */
-    font-size: 2.5rem; /* Możesz dostosować rozmiar czcionki */
+    /* font-size: 2.5rem; Możesz dostosować rozmiar czcionki */
   font-weight: bold;
 }
   
@@ -267,6 +312,57 @@ body, html {
   }
 }
 
+
+@media (min-width: 1581px) {
+  .bg-navy {
+    background-size: cover; /* Dostosuj styl tła dla większych ekranów */
+    background-position: center; /* Dostosuj styl tła dla większych ekranów */
+  }
+
+  .card {
+    width: 600px; /* Dostosuj szerokość dla ekranów większych niż 1580px */
+    height: 500px;
+    
+      
+ 
+  }
+
+  .card__background,
+  .card__content {
+    width: 600px; /* Dostosuj szerokość dla ekranów większych niż 1580px */
+    height:500px;
+  }
+
+  .card__title {
+    font-size: 30px; /* Dostosuj rozmiar czcionki dla ekranów większych niż 1580px */
+  }
+
+  .card__description {
+    font-size: 1.25rem; /* Dostosuj rozmiar czcionki dla ekranów większych niż 1580px */
+  }
+
+  .card__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    height: 55%;
+    padding: 12% 1.25rem 1.875rem;
+    width:600px;
+    background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.3) 10%,
+      hsl(0, 0%, 0%) 100%
+    );
+    
+  
+  
+  }
+}
+
+
 .regaty-container body {
   background: black;
   display: flex;
@@ -369,6 +465,7 @@ body, html {
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  width:100%;
 }
 
 .contact-section {
@@ -381,6 +478,30 @@ body, html {
   margin-right: 80px;
  
 }
+
+@media (min-width: 1581px) {
+  .contact-section {
+    border: 2px solid  rgba(255, 255, 255, 0.5); 
+    padding: 10px;
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.0); 
+    text-align: center; 
+    margin-right: 80px;
+   
+  }
+
+  
+}
+
+@media (min-width: 1581px) {
+ .nastepne{
+  margin-bottom: 5rem;
+ }
+
+  
+}
+
 
 .center-screen {
   display: flex;
@@ -402,7 +523,7 @@ body, html {
 }
 
 .gallery h2 {
-  font-size: 2.25rem;
+  /* font-size: 2.25rem; */
   font-family: "Montserrat", sans-serif;
   color: hsl(0, 0%, 100%);
   position: absolute;
@@ -413,7 +534,7 @@ body, html {
 }
 
 .gallery:hover h2 {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   
 }
 
@@ -464,30 +585,66 @@ body, html {
   }
 }
 
-
-/* Klasy dla animacji dropdown */
-.dropdown_menu-1 {
-  animation: slideDown 300ms ease-in-out forwards;
+.menu {
+  display: block;
+  margin: 0 auto ;
+  position: relative;
+  width: 200px;
 }
 
-/* Animacja dla pojedynczych elementów dropdown */
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
+.menu > li > a {
+  background: none;
+  color: #fff;
+  display: block;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+}
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.menu ul {
+  background: rgba(255, 255, 255, 0.35);
+  height: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: all .5s ease;
+  top: 35px;
+  width: 100%;
+}
+
+.menu li:hover ul {
+  height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu ul a {
+  color: #000;
+  display: block;
+  padding: 5px 20px;
+}
+
+
+@media (min-width: 1581px) {
+  .gallery {
+    display: grid;
+    place-items: center;
+    width: 600px;
+    height: 500px;
+ 
+}
+
+.gallery__background {
+  object-fit: cover;
+  width: 600px;
+  height: 500px;
+  transition: transform 500ms ease-in-out;
 }
 
 
 
 
-
-
+}
 
 
 

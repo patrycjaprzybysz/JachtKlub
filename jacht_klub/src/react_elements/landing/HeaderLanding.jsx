@@ -5,28 +5,7 @@ import NavigationButton from '../general/NavigationButton';
 import Dropdown from 'react-dropdown-select'; 
 
 export default function HeaderLanding() {
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    const handleMouseEnter = () => {
-        setDropdownOpen(true);
-    };
-
-    const handleMouseLeave = () => {
-        setDropdownOpen(false);
-    };
-
-    const options = [
-        { value: 'document1', label: 'Document 1', link: '../../assets/media/Lab1_Git.pdf' },
-        { value: 'document2', label: 'Document 2', link: '../../assets/media/Lab1_Git.pdf' },
-        // Dodaj więcej dokumentów według potrzeb
-    ];
-
-    const handleChange = (selectedOptions) => {
-        const selectedOption = selectedOptions[0];
-        if (selectedOption) {
-            window.open(selectedOption.link, '_blank');
-        }
-    };
 
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
@@ -59,23 +38,18 @@ export default function HeaderLanding() {
                         
                         </ul>
                         
-                        <Dropdown
-    options={options}
-    onChange={handleChange}
-    placeholder="DOKUMENTY"
-    dropdownHandle={true}
-    style={{ width: '150px', zIndex: isDropdownOpen ? 1000 : 1, border: 'none' }}
-    onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}
-    className={`dropdown_menu dropdown_menu-1 ${isDropdownOpen ? 'dropdown_menu--animated' : ''}`}
->
-  {/* Dodaj elementy dropdown_menu-1 tutaj */}
-  <li className="dropdown_item-1">Item 1</li>
-  <li className="dropdown_item-2">Item 2</li>
-  <li className="dropdown_item-3">Item 3</li>
-  <li className="dropdown_item-4">Item 4</li>
-  <li className="dropdown_item-5">Item 5</li>
-</Dropdown>
+                        <ul className="menu">
+  <li>
+    <a href="#">DOKUMENTY</a>
+    
+    <ul>
+      <li><a href="#">Dokument 1</a></li>
+      <li><a href="#">Dokument 2</a></li>
+      <li><a href="#">Dokument 3</a></li>
+      <li><a href="#">Dokument 4</a></li>
+    </ul>
+  </li>
+</ul>
 
                     </div>
                 </nav>

@@ -13,11 +13,11 @@ function Member({ title,  textWithoutList, imageSrc, altText, marginLeft, margin
       />
       <div className="card__content | flow">
         <div className="card__content--container | flow">
-          <h2 className="card__title" style={{ color: "white", fontSize:"20px" }}>
+          <h2 className="card__title text-white text-xl 2xl:text-4xl">
             {title}
           </h2>
         
-            <p className="card__description" style={{ color: "white",fontSize: "15px" }}>
+            <p className="card__description  text-white text-l 2xl:text-2xl" >
               {textWithoutList}
             </p>
         </div>
