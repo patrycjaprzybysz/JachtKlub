@@ -7,8 +7,8 @@ export default function LandingNews() {
         <>
             
             <div id="aktualnosci" >
-           
-            <h1 className=" text-3xl md:text-lg lg:text-3xl sm:text-base 2xl:text-5xl font-josefinsans text-text font-bold ml-10 mt-40 ">
+           <h1 id ="aktualnosci" className='mt-1 mb-20 text-4xl text-white'>.</h1>
+            <h1 className=" text-3xl md:text-lg lg:text-3xl sm:text-base 2xl:text-5xl font-josefinsans text-text font-bold ml-10 mt-20 ">
   Aktualności
   
 </h1>

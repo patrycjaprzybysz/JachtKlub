@@ -3,7 +3,7 @@ import darkwater from '../../assets/media/water.jpg';
 
 function Contact() {
   return (
-    <div id="kontakt"  className="contact-container flex flex-col md:flex-row justify-center text-center" style={{ marginTop: "1%" }}>
+    <div id ="kontakt" className="contact-container flex flex-col md:flex-row justify-center text-center" style={{ marginTop: "1%" }}>
       <div  className="contact-section border-4 border-solid border-white bg-opacity-0 mb-8 md:mr-8 md:mb-0 md:w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 md:p-4 lg:p-4 xl:p-4 2xl:p-4 ml-16">
         <h1  className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl" style={{ marginTop: "10%", color: "white" }}>Adres</h1>
         <p className="text-sm lg:text-base xl:text-lg 2xl:text-xl" style={{ color: "white", marginTop: "4%" }}>

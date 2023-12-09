@@ -40,7 +40,7 @@ function SecondHeader() {
           />
           <ul className={`navigation ${isMobileMenuOpen ? 'navigation--mobile' : ''}`}>
             <li>
-              <a onClick={() => scrollToSection('o nas')} className='font-jaldi' title="O nas">
+              <a onClick={() => scrollToSection('landingAbout')} className='font-jaldi' title="O nas">
                 O NAS
               </a>
             </li>
@@ -65,9 +65,9 @@ function SecondHeader() {
               </a>
             </li>
             <li>
-            <ul className="menu">
+            <ul className=" menu">
   <li>
-    <a href="#" className='font-jaldi -ml-24'>DOKUMENTY</a>
+    <a href="#" className='font-jaldi'>DOKUMENTY</a>
     
     <ul>
       <li><a href="#">Dokument 1</a></li>

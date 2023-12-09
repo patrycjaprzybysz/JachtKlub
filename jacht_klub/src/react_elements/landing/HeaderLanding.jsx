@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import WeatherWidget from './WeatherWidget';
 import NavigationButton from '../general/NavigationButton';
 import Dropdown from 'react-dropdown-select'; 
+import '../../styles/SecondHeader.css'
 
 export default function HeaderLanding() {
 
@@ -24,17 +25,37 @@ export default function HeaderLanding() {
                 <img className="logo absolute left-1/2 -translate-x-1/2 -translate-y-12 h-36 bg-text rounded-full p-2" src="src/assets/media/logo.png"></img>
                 <nav className="flex justify-around">
                     <div className="flex items-end">
-                        <ul className="font-jaldi mx-9 gap-16 flex">
-                        <li className="text-white text-xl font-jaldi" onClick={() => scrollToSection('landingAbout')}>O NAS</li>
-                    <li className="text-white text-xl font-jaldi" onClick={() => scrollToSection('aktualnosci')}>AKTUALNOŚCI</li>
+                        <ul className=" navigation font-jaldi mx-9 gap-16 flex">
+                        <li>
+              <a onClick={() => scrollToSection('landingAbout')} className='font-jaldi' title="O nas">
+                O NAS
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('aktualnosci')} className='font-jaldi' title="Aktualności">
+              AKTUALNOŚCI
+              </a>
+            </li>
                    
-                    <li className="text-white text-xl font-jaldi" onClick={() => scrollToSection('galeria')}>GALERIA</li>
+            <li>
+              <a onClick={() => scrollToSection('galeria')} className='font-jaldi' title="Galeria">
+                GALERIA
+              </a>
+            </li>
                         </ul>
                     </div>
                     <div className="flex items-end relative">
-                    <ul className="font-jaldi mx-9 gap-16 flex">
-                    <li className="text-white text-xl font-jaldi" onClick={() => scrollToSection('regaty')}>REGATY</li>
-                            <li className="text-white text-xl font-jaldi" onClick={() => scrollToSection('kontakt')}>KONTAKT</li>
+                    <ul className=" navigation font-jaldi mx-9 gap-16 flex">
+                    <li>
+              <a onClick={() => scrollToSection('regaty')} className='font-jaldi 'title="Regaty">
+                REGATY
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('kontakt')} className='font-jaldi' title="Kontakt">
+                KONTAKT
+              </a>
+            </li>
                         
                         </ul>
                         
@@ -43,10 +64,10 @@ export default function HeaderLanding() {
     <a href="#" className='font-jaldi'>DOKUMENTY</a>
     
     <ul>
-      <li><a href="#">Dokument 1</a></li>
-      <li><a href="#">Dokument 2</a></li>
-      <li><a href="#">Dokument 3</a></li>
-      <li><a href="#">Dokument 4</a></li>
+    <li><a href="../../assets/media/Lab1_Git.pdf" target="_blank" rel="noopener noreferrer">Dokument 1</a></li>
+              <li><a href="/pdfs/dokument2.pdf" target="_blank" rel="noopener noreferrer">Dokument 2</a></li>
+              <li><a href="/pdfs/dokument3.pdf" target="_blank" rel="noopener noreferrer">Dokument 3</a></li>
+              <li><a href="/pdfs/dokument4.pdf" target="_blank" rel="noopener noreferrer">Dokument 4</a></li>
     </ul>
   </li>
 </ul>

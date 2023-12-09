@@ -57,7 +57,7 @@
     align-items: center;
     gap: 24px;
     padding: 0px;
-    background-color: #2E425D; 
+    /* background-color: #2E425D;  */
 }
 
 .logo svg {

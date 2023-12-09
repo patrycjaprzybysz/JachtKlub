@@ -592,16 +592,17 @@ body, html {
   }
 }
 
-.menu {
+/* .menu {
   display: block;
   margin: 0 auto ;
   position: relative;
-  width: 200px;
-}
+  width: 10px;
+  margin-right: 40px;
+} */
 
 .menu > li > a {
   background: none;
-  color: #fff;
+  color: #ffffff;
   display: block;
   padding: 5px 20px;
   text-align: center;
