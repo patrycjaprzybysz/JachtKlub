@@ -94,7 +94,7 @@ export default function WeatherWidget() {
             </div>
             <div class="flex items-center gap-3">
                 <i class="wi ${weatherIcon} text-4xl"></i>
-                <p>${weatherDescription}</p>
+                <p >${weatherDescription}</p>
             </div>
         </div>
         <div class="flex justify-between items-center gap-3 text-white">

@@ -12,8 +12,8 @@ import navy from '../../assets/media/navy.jpg'
 function Crew() {
   return (
     
-     <div className="bg-navy w-full h-96 "> 
-      <h1 className="text-center font-bold text-3xl text-white">Członkowie zarządu</h1>
+     <div className="bg-navy cover  "> 
+      <h1 className="text-center font-bold text-3xl 2xl:text-5xl  text-white">Członkowie zarządu</h1>
       <div className="overflow-x-auto overflow-y-hidden flex items-center" >
       <div className="flex mt-10">
         <Member

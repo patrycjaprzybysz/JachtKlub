@@ -17,7 +17,7 @@ export default {
             navy:'#30415D',
             darkgrey:"#474848",
             yellow:"#E5CE00",
-            blue3:"#78A0C7"
+            blue3:"#78A0C7",
         },
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
@@ -34,6 +34,8 @@ export default {
                 right: '20px -20px rgb(63,130,172)',
             },
         },
+
+       
     },
     plugins: [ ],
 };
