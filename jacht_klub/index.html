@@ -18,6 +18,23 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/jsx/landing.jsx"></script>
+
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+  const sectionToScroll = window.location.hash.substring(1); // Pobranie fragmentu z adresu URL
+
+  if (sectionToScroll) {
+    const section = document.getElementById(sectionToScroll);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  }
+});
+
+  </script>
 </body>
 
 </html>

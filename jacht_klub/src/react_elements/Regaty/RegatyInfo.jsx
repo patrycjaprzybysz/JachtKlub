@@ -1,14 +1,55 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from '../general/Header';
 import background from '../../assets/media/niebo.jpg';
 import InputComponent from './Input';
 import SecondHeader from '../landing/SecondHeader';
-import mapka from '../../assets/media/mapka.jpg'
+import mapka from '../../assets/media/jezioro.jpg'
 
 export default function RegatyInfo() {
+  const [wyslano, setWyslano] = useState(false);
+  const [formData, setFormData] = useState({
+    nazwa: '',
+    typ: '',
+    oznaczenie: '',
+    dlugosc: '',
+    sternik: '',
+    stopien: '',
+    rok: '',
+    adres: '',
+    nr: '',
+    klub: '',
+    zaloga: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+//nie wiem jak to zrobic 
+
+
+  const handleWyslij = () => {
+    // kod do wysyłania zgłoszenia
+    setWyslano(true);
+  };
+
+  const handleEnterPress = () => {
+    // Find the focused input element
+    const focusedInput = document.activeElement;
+    if (focusedInput && focusedInput.tagName === 'INPUT') {
+      const nextInput = focusedInput.nextElementSibling;
+      if (nextInput) {
+        nextInput.focus();
+      }
+    }
+  };
   return (
+    
     <>
-      <SecondHeader/>
+      <Header/>
       <div className="flex flex-col md:flex-row lg:flex-row"style={{ 
         backgroundImage: `url(${background})`, 
         backgroundSize: "cover", 
@@ -25,8 +66,8 @@ export default function RegatyInfo() {
           marginBottom: "3%" 
         }}>
           <div style={{  
-            width: "500px", 
-            height: "1300px", 
+            width: "600px", 
+            height: "1310px", 
             background: "white", 
             border: "10px solid transparent", 
             borderRight:"none",
@@ -43,16 +84,20 @@ export default function RegatyInfo() {
                 Wypełnij poniższy formularz, aby zapisać<br />
                 swoją załogę do uczestnictwa w regatach 2024
               </h2>
+              <div className='items-center'>
+              {/* <p className='text-left ml-14 mt-5 text-lg text-text'>Rodzaj wyścigu:</p> */}
+            
+    {/* <label>
+        <input id="w1" type="checkbox" />
+        Wyścig I (Ustka - Darłowo 09.09.2023r.)
+    </label>
+    <br /> Dodaję przerwę, aby etykiety pojawiły się pod sobą */}
+    {/* <label>
+        <input id="w2" type="checkbox" />
+        Wyścig II (Darłowo na redzie 10.09.2023r.)
+    </label> */}
+    </div>
               <div style={{marginLeft:"10%", marginRight:"10%", marginTop:"8%"}}>
-                {/* <p>rodzaj wyścigu</p>
-                <label>
-                  <input id="w1" type="checkbox" />
-                  Wyścig I (Ustka - Darłowo 09.09.2023r.)
-                </label>
-                <label>
-                  <input id="w2" type="checkbox" />
-                  Wyścig II (Darłowo na redzie 10.09.2023r.)
-                </label> */}
               <div
                 style={{
                   backgroundColor: "white",
@@ -63,30 +108,34 @@ export default function RegatyInfo() {
                   marginBottom:"20px"
                 }}
               >
-                <p className='font-jaldi text-2xl font-bold mb-6 text-yellow text-center'>Informacje o jachcie</p>
+                <p className='font-jaldi text-2xl font-bold mb-6 text-yellow text-center hover:text-3xl transition-all'>Informacje o jachcie</p>
                 <InputComponent 
                   id="nazwa"
                   placeholder='input__field'
                   label="Nazwa"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                 <InputComponent 
                   id="typ"
                   placeholder='input__field'
                   label="Typ"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                 <InputComponent 
                   id="oznaczenie"
                   placeholder='input__field'
-                  label="oznaczenie na żaglu"
+                  label="Oznaczenie na żaglu"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                 <InputComponent 
                   id="dlugosc"
                   placeholder='input__field'
                   label="Długość całkowita jachtu L (m): "
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                 </div>
                 <div
@@ -99,36 +148,41 @@ export default function RegatyInfo() {
                   marginBottom:"20px"
                 }}
               >
-                <p className='font-jaldi text-2xl font-bold mb-6 text-yellow text-center'>Informacje o załodze</p>
+                <p className='font-jaldi text-2xl font-bold mb-6 text-yellow text-center hover:text-3xl transition-all'>Informacje o załodze</p>
                 <InputComponent 
                   id="sternik"
                   placeholder='input__field'
                   label="Sternik Jachtu"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                 <InputComponent 
                   id="stopien"
                   placeholder='input__field'
-                  label="stopień"
+                  label="Stopień"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                  <InputComponent 
                   id="rok"
                   placeholder='input__field'
-                  label="rok urodzenia"
+                  label="Rok urodzenia"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                 <InputComponent 
                   id="adres"
                   placeholder='input__field'
                   label="Adres zamieszkania"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                  <InputComponent 
                   id="nr"
                   placeholder='input__field'
-                  label="numer telefonu"
+                  label="Numer telefonu"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                
                 <InputComponent 
@@ -136,12 +190,14 @@ export default function RegatyInfo() {
                   placeholder='input__field'
                   label="Klub"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                 <InputComponent 
                   id="załoga"
                   placeholder='input__field'
-                  label="załoga"
+                  label="Załoga"
                   customClass="input__field-margin"
+                  onEnterPress={handleEnterPress}
                 />
                 </div>
 {/* 
@@ -149,14 +205,16 @@ export default function RegatyInfo() {
     <input id="akceptacja" type="checkbox" />
     Akceptuje regulamin
   </label> */}
- 
- <a 
-  href=""
-  className="font-jaldi text-white bg-text hover:bg-yellow-500 focus:bg-yellow-500 focus:outline-none rounded-lg py-2 px-4 lg:text-lg xl:text-xl 2xl:text-2xl transition duration-300 "
-  style={{ width: "200px" }}
->
-  Wyślij zgłoszenie
-</a>
+ <div className='items-center mx-auto'>
+        <button
+          onClick={handleWyslij}
+          className={`font-jaldi text-white bg-text focus:outline-none rounded-lg py-2 px-4 lg:text-lg xl:text-xl 2xl:text-2xl transition-all ${wyslano ? 'bg-green-500' : 'hover:bg-yellow-500'}`}
+          style={{ width: "200px" }}
+          disabled={wyslano}
+        >
+          {wyslano ? 'Wysłano!' : 'Wyślij zgłoszenie'}
+        </button>
+      </div>
 
 
 
@@ -165,8 +223,8 @@ export default function RegatyInfo() {
           </div>
 
           <div className='flex flex-col md:flex-row lg:flex-row' style={{  
-            width: "500px", 
-            height: "1300px", 
+            width: "600px", 
+            height: "1310px", 
             background: "white", 
             border: "10px solid transparent", 
             borderLeft:"none",
@@ -179,8 +237,8 @@ export default function RegatyInfo() {
           }}>
             
             <div>
-              <img src={mapka}/>
-              {/* zmienic ja */}
+              <img src={mapka} className='h-full'/>
+             
             </div>
           </div>
         </div>
@@ -189,4 +247,4 @@ export default function RegatyInfo() {
   );
 }
 
-//poprawic to czcionka rozmieszczenie dodac mapke
+//enter nie działa na ten moment

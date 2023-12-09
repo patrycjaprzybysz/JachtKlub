@@ -5,7 +5,7 @@ import News from './News';
 export default function NewsPage({newsArray}) {
     return (
         <>
-            <SecondHeader/>
+            <Header/>
             <div className="bg-grey flex flex-col gap-20 mt-32">
                 {newsArray.map(article => {
                     return <News photo={article.photo} title={article.title} text={article.text} />;

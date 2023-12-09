@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 function TileGallery({ title, imageSrc, altText, marginLeft, marginRight }) {
   return (
     <article className="gallery" style={{ marginLeft, marginRight, position: 'relative' }}>
-      {/* <Link to="/podstrona z galeria">  */}
         <div className="gallery__frame" style={{ position: 'absolute', width: '90%', height: '90%', border: '2px solid #fff', boxSizing: 'border-box', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '1' }}></div>
         <img
           className="gallery__background"
@@ -21,7 +20,7 @@ function TileGallery({ title, imageSrc, altText, marginLeft, marginRight }) {
             </h2>
           </div>
         </div>
-      {/* </Link> */}
+      
     </article>
   );
 }

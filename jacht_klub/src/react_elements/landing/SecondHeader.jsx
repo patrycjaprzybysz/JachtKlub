@@ -5,6 +5,7 @@ import burger from '../../assets/media/burger-menu.svg'
 import logo from '../../assets/media/logo.png'
 import WeatherWidget from './WeatherWidget';
 
+
 function SecondHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -28,7 +29,7 @@ function SecondHeader() {
         <div className="menu__bar">
         <a href="../../index.html">
           <img  title="Logo" src={logo} alt="Logo Jacht Klubu" className=" logo bg-text rounded-full p-1 mx-6 my-2 w-14">
-            {/* Your SVG code goes here */}
+           
           </img>
           </a>
           <img
@@ -73,7 +74,7 @@ function SecondHeader() {
       <li><a href="#">Dokument 1</a></li>
       <li><a href="#">Dokument 2</a></li>
       <li><a href="#">Dokument 3</a></li>
-      <li><a href="#">Dokument 4</a></li>
+      
     </ul>
   </li>
 </ul>

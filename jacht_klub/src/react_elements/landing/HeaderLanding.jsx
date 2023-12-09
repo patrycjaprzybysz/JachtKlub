@@ -20,7 +20,7 @@ export default function HeaderLanding() {
 
     return (
         <>
-            <header className="bg-blue_header/70 w-screen box-border fixed z-10 ">
+            <header className="bg-blue_header/70 w-full box-border fixed z-10 font-jaldi">
                 <WeatherWidget />
                 <img className="logo absolute left-1/2 -translate-x-1/2 -translate-y-12 h-36 bg-text rounded-full p-2" src="src/assets/media/logo.png"></img>
                 <nav className="flex justify-around">
@@ -52,7 +52,7 @@ export default function HeaderLanding() {
               </a>
             </li>
             <li>
-              <a onClick={() => scrollToSection('kontakt')} className='font-jaldi' title="Kontakt">
+            <a onClick={() => scrollToSection('kontakt')} className='font-jaldi' title="Kontakt">
                 KONTAKT
               </a>
             </li>
