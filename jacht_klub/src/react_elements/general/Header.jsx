@@ -8,7 +8,7 @@ export default function Header() {
                     <img src="../../src/assets/media/logo.png" alt="Logo Jacht Klubu" className="bg-text rounded-full p-1 mx-6 my-2 w-24" />
                 </a>
                 <nav className="self-end mx-20 my-6">
-                    <ul className="flex gap-20">
+                    <ul className=" flex gap-20">
                         {/* <NavigationButton name={'aktualności'} htmlPageName={'news'} /> */}
                         <li>O nas</li>
                         <li>Aktualności</li>
