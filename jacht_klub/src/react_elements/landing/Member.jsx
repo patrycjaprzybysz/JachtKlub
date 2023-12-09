@@ -13,7 +13,7 @@ function Member({ title,  textWithoutList, imageSrc, altText, marginLeft, margin
       />
       <div className="card__content | flow">
         <div className="card__content--container | flow">
-          <h2 className="card__title text-white text-xl 2xl:text-4xl">
+          <h2 className="card__title text-white text-xl sm:text-base md:text-base lg:text-xl 2xl:text-4xl  font-jaldi">
             {title}
           </h2>
         

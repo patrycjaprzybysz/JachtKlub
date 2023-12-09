@@ -7,7 +7,7 @@ import SecondHeader from '../landing/SecondHeader';
 function Article() {
   return (
     <div>
-      <SecondHeader/>
+      <Header/>
 
       <div className='flex flex-col justify-center items-center'>
         <h1 className='text-text text-5xl mt-20 mb-5  font-jaldi'>Regaty 2023</h1>

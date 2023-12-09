@@ -58,5 +58,3 @@ function Regaty() {
 
 export default Regaty;
 
-//zrobic tego style tak jak tutaj https://frontendin.com/css-wave-text-effects/ sa juz w index.css jakies ale nie działa mi musze pokombinowac 
-// po naciśnieciu dowiec się więcej przenosi do strony z mapa i formularzem regat

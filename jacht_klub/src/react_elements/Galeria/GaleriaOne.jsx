@@ -12,7 +12,7 @@ function GaleriaOne() {
   let date ="13 czerwca 2023"
   return (
     <div>
-      <SecondHeader/>
+      <Header/>
 
       <div className='flex flex-col justify-center items-center '>
         <h1 className='text-text text-5xl mt-20 mb-5 font-bold font-jaldi'>{title}</h1>

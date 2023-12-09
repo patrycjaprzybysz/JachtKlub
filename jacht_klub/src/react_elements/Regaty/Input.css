@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: jaldi;
   }
   
   .box {
@@ -69,7 +70,7 @@
   .input__field:focus ~ .input__label,
   .input__field:not(:placeholder-shown) ~ .input__label {
     color: var(--primary);
-    top: -10px; /* Adjust as needed */
+    top: -10px; 
     padding-top: 0;
   }
   

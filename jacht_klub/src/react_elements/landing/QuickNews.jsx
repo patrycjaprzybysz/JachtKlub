@@ -26,11 +26,11 @@ export default function QuickNews({ title, description, photo = '/src/assets/med
                 Opisanie całego rejsu dookoła Bałtyku, jaki w te wakacje odbył SY Sekstant, a zorganizował Jacht Klub Królewskiego Miasta Darłowo nie jest łatwe. Niełatwe, bo rejs trwał ponad półtora miesiąca, załogi wymieniały się sześć razy, było pięciu kapitanów i trzydziestu jeden uczestników. Cała historia rozpoczęła się kilka lat temu, kiedy w mojej głowie zrodził się pomysł, ...
               </p>
               <a
-                href="../../src/html/article.html"
-                className="font-jaldi text-white bg-text rounded-r-lg rounded-l-lg w-32 text-center lg:text-lg xl:text-xl 2xl:text-2xl "
-              >
-                Czytaj dalej
-              </a>
+            href="../../src/html/article.html"
+            className="font-jaldi text-white bg-text rounded-r-lg rounded-l-lg w-32 text-center lg:text-lg xl:text-xl 2xl:text-2xl hover:bg-opacity-80 transition-all"
+          >
+            Czytaj dalej
+          </a>
             </div>
           </div>
         </div>
