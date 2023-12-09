@@ -1,3 +1,9 @@
+:root {
+    --primary: #F4BD50;
+    --background: #191919;
+    --navbar-height: 48px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,9 +37,10 @@
     flex-direction: row;
     padding: 0 16px;
     gap: 32px;
-    background-color: #191919;
+    background-color:#2E425D; 
     height: 60px;
     opacity: 0.9;
+
 }
 
 .menu-icon {
@@ -50,10 +57,10 @@
     align-items: center;
     gap: 24px;
     padding: 0px;
-    background-color: #191919;
+    background-color: #2E425D; 
 }
 
-.logo img {
+.logo svg {
     width: 32px;
     height: 32px;
 }
@@ -72,21 +79,22 @@
     text-decoration: none;
     font-weight: 500;
     background-image: linear-gradient(to right,
-            #F4BD50,
-            #F4BD50 50%,
+            var(--primary),
+            var(--primary) 50%,
             white 50%);
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
     padding: 3px 0;
     position: relative;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.2s ease-in-out;
 }
 
 .navigation>li>a:before {
     content: '';
-    background: #F4BD50;
+    background: var(--primary);
     display: block;
     position: absolute;
     bottom: -2px;
@@ -111,6 +119,7 @@
 }
 
 @media (max-width: 600px) {
+
     .navigation {
         display: none;
     }
@@ -120,13 +129,13 @@
     }
 
     .navigation--mobile {
-        top: 48px; /* Use the desired height instead of --navbar-height */
+        top: var(--navbar-height);
         position: absolute;
         right: 0px;
         display: flex;
         padding: 80px 60px;
         min-height: 100%;
-        background-color: #191919;
+        background-color: var(--background);
         gap: 8px;
         flex-direction: column;
         align-items: flex-start;
@@ -144,7 +153,7 @@
         100% {
             opacity: 1;
             width: 100%;
-            height: calc(100vh - 48px); /* Use the desired height instead of --navbar-height */
+            height: calc(100vh - var(--navbar-height));
         }
     }
 
@@ -156,7 +165,7 @@
         0% {
             opacity: 1;
             width: 100%;
-            height: calc(100vh - 48px); /* Use the desired height instead of --navbar-height */
+            height: calc(100vh - var(--navbar-height));
         }
 
         100% {
@@ -165,4 +174,5 @@
             height: 0;
         }
     }
+
 }

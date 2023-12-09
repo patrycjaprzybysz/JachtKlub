@@ -1,63 +1,92 @@
-// import React, { useState } from 'react';
-// import '
+import React, { useState } from 'react';
+import '../../styles/SecondHeader.css'
+import close from '../../assets/media/close.svg'
+import burger from '../../assets/media/burger-menu.svg'
+import logo from '../../assets/media/logo.png'
+import WeatherWidget from './WeatherWidget';
 
-// function SecondHeader() {
-//   const [isMobile, setMobile] = useState(false);
+function SecondHeader() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-//   const toggleMenu = () => {
-//     // Your existing toggleMenu logic here
-//     setMobile((prevMobile) => !prevMobile);
-//   };
+  const toggleMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
-//   return (
-//         <div className={isMobile ? 'menu__bar mobile' : 'menu__bar'}>
-//           <img className="logo absolute left-1/2 transform -translate-x-1/2 -translate-y-12 h-12 bg-text rounded-full p-2"
-//             src="src/assets/media/logo.png" alt="Logo"
-//           />
-//           <img className="menu-icon" src={isMobile ? 'assets/close.svg' : 'assets/burger-menu.svg'} 
-//             title={isMobile ? 'Close Menu' : 'Burger Menu'} alt={isMobile ? 'Close Menu' : 'Burger Menu'}
-//             onClick={toggleMenu}
-//           />
-//       <img className="menu-icon" src={isMobile ? 'assets/close.svg' : 'assets/burger-menu.svg'} 
-//         title={isMobile ? 'Close Menu' : 'Burger Menu'} alt={isMobile ? 'Close Menu' : 'Burger Menu'}
-//         onClick={toggleMenu}
-//       />
-//       {!isMobile && (
-//         <ul className="navigation">
-//           <li>
-//             <a href="#services" title="O NAS">
-//               Services
-//             </a>
-//           </li>
-//           <li>
-//             <a href="#blog" title="AKTUALNOŚCI">
-//               Blog
-//             </a>
-//           </li>
-//           <li>
-//             <a href="#about" title="GALERIA">
-//               About
-//             </a>
-//           </li>
-//           <li>
-//             <a href="#contact-us" title="REGATY">
-//               Contact Us
-//             </a>
-//           </li>
-//           <li>
-//             <a href="#contact-us" title="KONTAKT">
-//               Contact Us
-//             </a>
-//           </li>
-//           <li>
-//             <a href="#contact-us" title="DOKUMENTY">
-//               Contact Us
-//             </a>
-//           </li>
-//         </ul>
-//       )}
-//     </div>
-//   );
-// }
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        window.scrollTo({
+            top: section.offsetTop,
+            behavior: 'smooth',
+        });
+    }
+};
 
-// export default SecondHeader;
+  return (
+   
+      <div className="menu__wrapper">
+        <div className="menu__bar">
+        <a href="../../index.html">
+          <img  title="Logo" src={logo} alt="Logo Jacht Klubu" className=" logo bg-text rounded-full p-1 mx-6 my-2 w-14">
+            {/* Your SVG code goes here */}
+          </img>
+          </a>
+          <img
+            className="menu-icon"
+            src={isMobileMenuOpen ? close : burger}
+            title="Burger Menu"
+            alt="Burger Menu"
+            onClick={toggleMenu}
+          />
+          <ul className={`navigation ${isMobileMenuOpen ? 'navigation--mobile' : ''}`}>
+            <li>
+              <a onClick={() => scrollToSection('o nas')} className='font-jaldi' title="O nas">
+                O NAS
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('aktualnosci')} className='font-jaldi' title="Aktualności">
+              AKTUALNOŚCI
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('galeria')} className='font-jaldi' title="Galeria">
+                GALERIA
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('regaty')} className='font-jaldi 'title="Regaty">
+                REGATY
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('kontakt')} className='font-jaldi' title="Kontakt">
+                KONTAKT
+              </a>
+            </li>
+            <li>
+            <ul className="menu">
+  <li>
+    <a href="#" className='font-jaldi -ml-24'>DOKUMENTY</a>
+    
+    <ul>
+      <li><a href="#">Dokument 1</a></li>
+      <li><a href="#">Dokument 2</a></li>
+      <li><a href="#">Dokument 3</a></li>
+      <li><a href="#">Dokument 4</a></li>
+    </ul>
+  </li>
+</ul>
+            </li>
+            {/* <div className='-ml-20 text-center'>
+            <WeatherWidget/>
+            </div> */}
+          </ul>
+        
+        </div>
+      </div>
+    
+  );
+};
+
+export default SecondHeader;

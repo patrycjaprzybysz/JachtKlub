@@ -16,7 +16,7 @@ function TileGallery({ title, imageSrc, altText, marginLeft, marginRight }) {
         />
         <div className="gallery__content | flow">
           <div className="gallery__content--container | flow">
-            <h2 className="gallery__title text-white text-xl 2xl:text-4xl" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', margin: '0', zIndex: '2' }}>
+            <h2 className="gallery__title text-white text-xl 2xl:text-4xl" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', margin: '0', zIndex: '1' }}>
               {title}
             </h2>
           </div>

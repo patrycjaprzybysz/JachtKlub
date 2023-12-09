@@ -4,28 +4,34 @@
 
 /* Dla małych ekranów */
 /* Dla ekranów pomiędzy 640px a 768px */
-@media (min-width: 640px) and (max-width: 768px) {
+@media (max-width: 640px)  {
   .landing-title h1 {
-    font-size: 4xl;
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 640px)  {
+  .landing-title h1 {
+    font-size: 2em;
   }
 }
 
 /* Dla ekranów pomiędzy 768px a 1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px)  {
   .landing-title h1 {
     font-size: 2em;
   }
 }
 
 /* Dla ekranów pomiędzy 1024px a 1280px */
-@media (min-width: 1024px) and (max-width: 1280px) {
+@media (min-width: 1024px)  {
   .landing-title h1 {
     font-size: 3em;
   }
 }
 
 /* Dla ekranów pomiędzy 1280px a 1536px */
-@media (min-width: 1280px) and (max-width: 1536px) {
+@media (min-width: 1280px) {
   .landing-title h1 {
     font-size: 3em;
   }
@@ -41,13 +47,15 @@
 
 
 
-
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
- 
-  
+  min-zoom: 100%;
+  touch-action: manipulation; /* Zapobiega domyślnej manipulacji przeglądania na urządzeniach dotykowych */
+  user-select: none; /* Zapobiega zaznaczaniu tekstu przez użytkownika */
+   /* Zapobiega przewijaniu strony */
+  font-family: "font-jaldi";
   /* This can help in some cases */
 }
 
@@ -80,6 +88,7 @@ body, html {
     max-width: 1200px;
     padding: 2rem;
     text-align: left; /* Dodajemy tę właściwość, aby tekst był wyśrodkowany */
+   
   }
   
   .landing-title h1 {
@@ -333,9 +342,7 @@ body, html {
     height:500px;
   }
 
-  .card__title {
-    font-size: 30px; /* Dostosuj rozmiar czcionki dla ekranów większych niż 1580px */
-  }
+  
 
   .card__description {
     font-size: 1.25rem; /* Dostosuj rozmiar czcionki dla ekranów większych niż 1580px */
@@ -471,8 +478,8 @@ body, html {
 .contact-section {
   border: 2px solid  rgba(255, 255, 255, 0.5); 
   padding: 10px;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 250px;
   background-color: rgba(255, 255, 255, 0.0); 
   text-align: center; 
   margin-right: 80px;
@@ -514,8 +521,8 @@ body, html {
 .gallery {
   display: grid;
   place-items: center;
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 250px;
   overflow: hidden;
   margin-right: 50px;
   position: relative;
@@ -640,11 +647,13 @@ body, html {
   height: 500px;
   transition: transform 500ms ease-in-out;
 }
-
-
-
-
 }
+
+
+/* Your existing styles */
+
+
+
 
 
 

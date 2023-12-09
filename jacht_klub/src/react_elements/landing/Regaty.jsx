@@ -6,8 +6,8 @@ function Timer({ type, time }) {
 
   const timerStyle = {
     color: 'white',
-    fontSize: '5em', 
-    
+    fontSize: '5em',
+    fontFamily: 'font-jaldi',
   };
 
   return <div className={type} style={timerStyle}>{formattedTime}</div>;
@@ -39,16 +39,17 @@ function Regaty() {
   }, [targetDate]);
 
   return (
-<div id="regaty" className='center-screen text-center w-full '>
-    <h1 className='nastepne text-white text-6xl 2xl:text-8xl mb-4 mt-80'>Następne regaty</h1>
-    <div className=" text-overlay flex space-x-4 mb-4 2xl:text-2xl">
-      <Timer type="hours" time={time.hours} />
+<div className='center-screen text-center w-full '>
+  <h1 id="regaty" className='text-2xl text-center mt-72 opacity-5 '>.</h1>
+      <h1    className='nastepne text-white text-6xl 2xl:text-8xl mb-4 mt-16 font-jaldi'>Następne regaty</h1>
+    <div className=" text-overlay flex space-x-4 mb-4 2xl:text-2xl ">
+      <Timer  type="hours" time={time.hours} />
       <div className="separator" style={{ color: "white", fontSize: "4em" }}>:</div>
       <Timer type="minutes" time={time.minutes} />
       <div className="separator" style={{ color: "white", fontSize: "4em" }}>:</div>
       <Timer type="seconds" time={time.seconds} />
     </div>
-    <a href="../../src/html/regaty.html" className="bg-yellow rounded-lg px-4 py-2 text-black mt-8 text-xl">
+    <a href="../../src/html/regaty.html" className="bg-yellow rounded-lg px-4 py-2 text-black mt-8 text-xl font-jaldi">
   Dowiedz się więcej!
 </a>
   </div>

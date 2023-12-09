@@ -11,7 +11,12 @@ export default function News({
                     <div className="my-8 flex flex-col justify-between">
                         <h3 className="text-3xl text-text font-bold font-jaldi">{title}</h3>
                         <p className="font-jaldi w-9/10 text-lg whitespace-normal">{text}</p>
-                        <button className="self-start font-jaldi text-white bg-text text-lg rounded-r-lg rounded-l-lg w-32 ">Czytaj więcej</button>
+                        <a
+                href="../../src/html/article.html"
+                className="font-jaldi text-white bg-text rounded-r-lg rounded-l-lg w-32 text-center lg:text-lg xl:text-xl 2xl:text-2xl "
+              >
+                Czytaj dalej
+              </a>
                     </div>
                 </div>
             </div>

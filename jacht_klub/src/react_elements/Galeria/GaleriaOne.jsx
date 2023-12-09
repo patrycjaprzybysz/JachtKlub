@@ -2,11 +2,12 @@ import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; 
 import Header from '../general/Header';
 import regaty2023 from '../../assets/media/trzyperły.jpeg';
+import SecondHeader from '../landing/SecondHeader';
 
 function GaleriaOne() {
   return (
     <div>
-      <Header/>
+      <SecondHeader/>
 
       <div className='flex flex-col justify-center items-center'>
         <h1 className='text-text text-5xl mt-20 mb-5 font-bold'>Regaty 2023</h1>

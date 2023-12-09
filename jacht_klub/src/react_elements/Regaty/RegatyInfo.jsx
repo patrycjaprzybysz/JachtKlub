@@ -2,15 +2,16 @@ import React from 'react';
 import Header from '../general/Header';
 import background from '../../assets/media/niebo.jpg';
 import InputComponent from './Input';
+import SecondHeader from '../landing/SecondHeader';
 
 export default function RegatyInfo() {
   return (
     <>
-      <Header />
+      <SecondHeader/>
       <div style={{ 
         backgroundImage: `url(${background})`, 
         backgroundSize: "cover", 
-        height: "120vh", 
+        height: "auto", 
         display: "flex", 
         flexDirection: "column", 
         position: "relative",
@@ -33,6 +34,7 @@ export default function RegatyInfo() {
             boxShadow: "0 4px 4px rgba(0, 0, 0, 0.1)", 
             position: "relative", 
             zIndex: 1,
+            marginTop: "5%"
           }}>
             <div>
               <h1 style={{textAlign:'center', color:"#E5CE00", fontWeight:"bold", fontSize:"36px", marginTop:"5%"}}>Regaty 2024</h1>
@@ -68,6 +70,7 @@ export default function RegatyInfo() {
             boxShadow: "0 4px 4px rgba(0, 0, 0, 0.1)",
             position: "relative", 
             zIndex: 1,
+            marginTop:"5%"
           }}>
             
             <div>
