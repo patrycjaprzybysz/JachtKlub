@@ -4,6 +4,7 @@ import background from '../../assets/media/niebo.jpg';
 import InputComponent from './Input';
 import SecondHeader from '../landing/SecondHeader';
 import mapka from '../../assets/media/jezioro.jpg'
+import jezioro from '../../assets/media/bukowo.webp'
 
 export default function RegatyInfo() {
   const [wyslano, setWyslano] = useState(false);
@@ -51,7 +52,7 @@ export default function RegatyInfo() {
     <>
       <Header/>
       <div className="flex flex-col md:flex-row lg:flex-row"style={{ 
-        backgroundImage: `url(${background})`, 
+        backgroundImage: `url(${jezioro})`, 
         backgroundSize: "cover", 
         height: "auto", 
         display: "flex", 
@@ -70,7 +71,6 @@ export default function RegatyInfo() {
             height: "1310px", 
             background: "white", 
             border: "10px solid transparent", 
-            borderRight:"none",
             backgroundClip: "padding-box",
             borderImage: `linear-gradient(to bottom, #30415D, #566B8C) 1`, 
             boxShadow: "0 4px 4px rgba(0, 0, 0, 0.1)", 
@@ -222,7 +222,7 @@ export default function RegatyInfo() {
             </div>
           </div>
 
-          <div className='flex flex-col md:flex-row lg:flex-row' style={{  
+          {/* <div className='flex flex-col md:flex-row lg:flex-row' style={{  
             width: "600px", 
             height: "1310px", 
             background: "white", 
@@ -240,7 +240,7 @@ export default function RegatyInfo() {
               <img src={mapka} className='h-full'/>
              
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
