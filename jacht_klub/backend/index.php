@@ -1,62 +1,55 @@
 <?php
-include_once('database/connection.php');
+header("Access-Control-Allow-Origin: *");  // "*" could also be a site such as http://www.example.com
 
-function getArticles()
-{
-    $sql = 'SELECT * FROM articles
-            ORDER BY id DESC';
-    return json_encode(pg_fetch_all(pg_query($sql)));
+include_once('REST.php');
+
+// Get the requested URI
+$requestUri = $_SERVER['REQUEST_URI'];
+
+// Extract the last segment after the last slash
+$segments = explode('/', rtrim($requestUri, '/'));
+$lastSegment = end($segments);
+
+if (str_contains($lastSegment, '?')) {
+    $lastSegment = substr($lastSegment, 0, strpos($lastSegment, '?'));
 }
 
-function getArticleById($id)
-{
-    $sql = 'SELECT * FROM articles
-            WHERE id=' . $id;
-    return json_encode(pg_fetch_object(pg_query($sql)));
+// Get the request method
+$method = $_SERVER['REQUEST_METHOD'];
+
+// Routing logic
+switch ($method) {
+    case 'GET':
+        switch ($lastSegment) {
+            case 'articles':
+                echo getArticles();
+                break;
+            case 'article':
+                $id = isset($_GET['id']) ? $_GET['id'] : null;
+                echo getArticleById($id);
+                break;
+            case 'regattas':
+                echo getRegattas();
+                break;
+            case 'regatta-results':
+                $year = isset($_GET['year']) ? $_GET['year'] : null;
+                $run = isset($_GET['run']) ? $_GET['run'] : null;
+                echo getRegattasResult($year, $run);
+                break;
+            case 'gallery-albums':
+                echo getGalleryAlbums();
+                break;
+            case 'gallery-album':
+                $id = isset($_GET['id']) ? $_GET['id'] : null;
+                echo getGalleryAlbumById($id);
+                break;
+            default:
+                http_response_code(404);
+                echo json_encode(['error' => 'Not Found']);
+        }
+        break;
+    default:
+        http_response_code(404);
+        echo json_encode(['error' => 'Not Found']);
 }
-
-function getRegattas()
-{
-    $sql = 'SELECT * FROM regatta
-            ORDER BY id DESC';
-
-    return json_encode(pg_fetch_all(pg_query($sql)));
-}
-
-function getRegattasResult($year, $run)
-{
-    $sql = 'SELECT * FROM regatta_results_' . $year . '_' . $run;
-
-    return json_encode(pg_fetch_all(pg_query($sql)));
-}
-
-function getGalleryAlbums()
-{
-    $sql = 'SELECT * FROM gallery_albums
-            ORDER BY id DESC';
-
-    $articles = pg_fetch_all(pg_query($sql));
-
-    foreach ($articles as $index => $article) {
-        $article['photos'] = scandir($article['folder_path']);
-        $article['photos'] = array_slice($article['photos'], 2);
-        $articles[$index] = $article;
-    }
-    return json_encode($articles);
-}
-
-function getGalleryAlbumById($id)
-{
-    $sql = 'SELECT * FROM gallery_albums
-            WHERE id=' . $id;
-
-    $article = pg_fetch_all(pg_query($sql))[0];
-
-    $article['photos'] = scandir($article['folder_path']);
-    $article['photos'] = array_slice($article['photos'], 2);
-
-    return json_encode($article);
-}
-
-echo getRegattasResult('2023', 1);
 ?>

@@ -6,6 +6,12 @@ create table articles(
     published TIMESTAMPTZ NOT NULL DEFAULT NOW()
 )
 
+create table gallery_albums(
+    id serial PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    folder_path VARCHAR(255) NOT NULL
+)
+
 create table regatta(
     id serial PRIMARY KEY,
     event_year VARCHAR(4),
@@ -25,11 +31,6 @@ create table regatta_results_YERA_RUN(
     general SMALLINT
 )
 
-create table gallery_albums(
-    id serial PRIMARY KEY,
-    title VARCHAR(100) NOT NULL,
-    folder_path VARCHAR(255) NOT NULL
-)
 
 insert into articles(title, content, photo)
 values ('Regaty Trzy Perły 2023', 'Zarządu Jacht Klubu rozpocząl przygotowania do Regat "Trzy Perły". Podzieliliśmy role, przydzieliliśmy zadania, ustaliliśmy terminy. Edycja majowa odbędzie się w dniach 27-28.05.2023r.
