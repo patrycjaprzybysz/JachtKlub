@@ -5,6 +5,7 @@ import NavigationButton from '../general/NavigationButton';
 import Dropdown from 'react-dropdown-select'; 
 import '../../styles/SecondHeader.css'
 
+
 export default function HeaderLanding() {
 
 
@@ -64,10 +65,12 @@ export default function HeaderLanding() {
     <a href="#" className='font-jaldi'>DOKUMENTY</a>
     
     <ul>
-    <li><a href="../../assets/media/Lab1_Git.pdf" target="_blank" rel="noopener noreferrer">Dokument 1</a></li>
-              <li><a href="/pdfs/dokument2.pdf" target="_blank" rel="noopener noreferrer">Dokument 2</a></li>
-              <li><a href="/pdfs/dokument3.pdf" target="_blank" rel="noopener noreferrer">Dokument 3</a></li>
-              <li><a href="/pdfs/dokument4.pdf" target="_blank" rel="noopener noreferrer">Dokument 4</a></li>
+    <li><a href="../../documents/regulamin.docx" target="_blank" rel="noopener noreferrer" download>Regulamin regat</a></li>
+              <li><a href="../../documents/info.docx" target="_blank" rel="noopener noreferrer" download>Informacje dla kapitanów 2</a></li>
+              <li><a href="../../documents/zgloszenie.doc" target="_blank" rel="noopener noreferrer" download>Zgłoszenie do regat</a></li>
+              <li><a href="../../documents/STATUT.docx"target="_blank" rel="noopener noreferrer" download>Statut</a></li>
+              <li><a href="../../documents/Deklaracja.docx"target="_blank" rel="noopener noreferrer" download>Deklaracja członkostwa</a></li>
+              <li><a href="../../documents/Decyzja.jpg"target="_blank" rel="noopener noreferrer" download>Decyzja</a></li>
     </ul>
   </li>
 </ul>
