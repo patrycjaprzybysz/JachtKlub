@@ -51,3 +51,10 @@ Welcome to the Jacht Klub Darłowo website repository! This website is built usi
 
    ```bash
    php -S locallhost:3000
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 5d0717bf9a1dab71953ef7d14342fe824dfa671f
