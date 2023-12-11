@@ -1,6 +1,14 @@
 <?php
-header("Access-Control-Allow-Origin: *");  // "*" could also be a site such as http://www.example.com
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
+// If the request is an OPTIONS request, return only the headers and exit
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    header("Content-Length: 0");
+    exit();
+}
 include_once('REST.php');
 
 // Get the requested URI
@@ -42,6 +50,37 @@ switch ($method) {
             case 'gallery-album':
                 $id = isset($_GET['id']) ? $_GET['id'] : null;
                 echo getGalleryAlbumById($id);
+                break;
+            case 'error':
+                pg_last_error($GLOBALS['dbconn']);
+                break;
+            default:
+                http_response_code(404);
+                echo json_encode(['error' => 'Not Found']);
+        }
+        break;
+    case 'POST':
+        var_dump($_POST);
+
+        switch ($lastSegment) {
+            case 'crew':
+                var_dump('addCrew function called');
+
+                // Extract data from the POST request
+                $vesselName = isset($_POST['vessel_name']) ? $_POST['vessel_name'] : null;
+                $vesselType = isset($_POST['vessel_type']) ? $_POST['vessel_type'] : null;
+                $mark = isset($_POST['mark']) ? $_POST['mark'] : null;
+                $length = isset($_POST['length']) ? $_POST['length'] : null;
+                $captain = isset($_POST['captain']) ? $_POST['captain'] : null;
+                $qualifications = isset($_POST['qualifications']) ? $_POST['qualifications'] : null;
+                $dateOfBirth = isset($_POST['date_of_birth']) ? $_POST['date_of_birth'] : null;
+                $address = isset($_POST['address']) ? $_POST['address'] : null;
+                $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
+                $club = isset($_POST['club']) ? $_POST['club'] : null;
+                $crewmen = isset($_POST['crewmen']) ? $_POST['crewmen'] : null;
+
+                // Call the function to add crew data
+                echo addCrew($vesselName, $vesselType, $mark, $length, $captain, $qualifications, $dateOfBirth, $address, $phone, $club, $crewmen);
                 break;
             default:
                 http_response_code(404);

@@ -95,4 +95,36 @@ function getGalleryAlbumById($id)
 
     return json_encode($album);
 }
+
+function addCrew($vesselName, $vesselType, $mark, $length, $captain, $qualifications, $dateOfBirth, $address, $phone, $club, $crewmen)
+{
+    $sql = 'INSERT INTO crew 
+            (vessel_name, vessel_type, mark, length, captain, qualifications, date_of_birth, address, phone, club, crewmen) 
+            VALUES 
+            ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)';
+
+    $params = [
+        $vesselName,
+        $vesselType,
+        $mark,
+        $length,
+        $captain,
+        $qualifications,
+        $dateOfBirth,
+        $address,
+        $phone,
+        $club,
+        $crewmen,
+    ];
+
+    $result = pg_query_params($GLOBALS['dbconn'], $sql, $params);
+
+    if ($result === false) {
+        // Handle database query error
+        return json_encode(['error' => 'Database error']);
+    }
+
+    return json_encode(['message' => 'Crew data added successfully']);
+}
+
 ?>

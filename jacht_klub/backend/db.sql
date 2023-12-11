@@ -31,6 +31,21 @@ create table regatta_results_YERA_RUN(
     general SMALLINT
 )
 
+create table crew(
+    id serial PRIMARY KEY,
+    vessel_name VARCHAR(20) NOT NULL,
+    vessel_type VARCHAR(20) NOT NULL,
+    mark VARCHAR(20) NOT NULL,
+    lenght SMALLINT,
+    captain VARCHAR(50),
+    qualifications VARCHAR(128),
+    date_of_birth DATE,
+    address VARCHAR(256),
+    phone VARCHAR(20),
+    club VARCHAR(128),
+    crewmen text
+)
+
 
 insert into articles(title, content, photo)
 values ('Regaty Trzy Perły 2023', 'Zarządu Jacht Klubu rozpocząl przygotowania do Regat "Trzy Perły". Podzieliliśmy role, przydzieliliśmy zadania, ustaliliśmy terminy. Edycja majowa odbędzie się w dniach 27-28.05.2023r.
